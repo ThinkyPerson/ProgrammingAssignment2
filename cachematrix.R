@@ -30,11 +30,12 @@ cacheSolve <- function(x, ...) {
     if(!is.null(inverseMat)) {
         message("returning cached inverse")
         return(inverseMat)
+        ## checks if there is a cached value available
     }
     dataSet <- x$getMat()
     inverseMat <- solve(dataSet)
     x$cacheMat(inverseMat)
     inverseMat
-        ## Return a matrix that is the inverse of 'x'
+        ## Returns a matrix that is the inverse of 'x'
     
 }
